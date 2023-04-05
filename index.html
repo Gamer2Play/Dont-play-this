@@ -4,6 +4,7 @@
   <br>
 <button id="btnLoadGame" onclick="loadGame()" style="width: 240px;">Загрузить игру</button><br>
   <br>
+<script>
 function saveGame() {
       localStorage.setItem('gameTutorial', JSON.stringify(game));
     }
@@ -12,5 +13,6 @@ function loadGame() {
       for (var propertyName in gameTemp) { game[propertyName] = gameTemp[propertyName]; }
       updateUI();
     }
+</script>
 </body>
 </html>
