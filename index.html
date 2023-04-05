@@ -1,0 +1,14 @@
+<html>
+<body>
+ <button id="btnSaveGame" onclick="saveGame()" style="width: 240px;">Сохранить игру</button><br>
+  <br>
+<button id="btnLoadGame" onclick="loadGame()" style="width: 240px;">Загрузить игру</button><br>
+  <br>
+function saveGame() {
+      localStorage.setItem('gameTutorial', JSON.stringify(game));
+    }
+function loadGame() {
+      let gameTemp = JSON.parse(localStorage.getItem('gameTutorial'));
+      for (var propertyName in gameTemp) { game[propertyName] = gameTemp[propertyName]; }
+      updateUI();
+    }
