@@ -1,10 +1,15 @@
 <html>
 <body>
- <button id="btnSaveGame" onclick="saveGame()" style="width: 240px;">Сохранить игру</button><br>
+ <button id="btnSaveGame" onclick="saveGame()" style="width: 240px;">Сохранить</button><br>
   <br>
-<button id="btnLoadGame" onclick="loadGame()" style="width: 240px;">Загрузить игру</button><br>
+<button id="btnLoadGame" onclick="loadGame()" style="width: 240px;">Загрузить</button><br>
   <br>
+  Медные монеты: <span id="spnCoppersValue">0</span><br>
 <script>
+ let game = {
+  coppers: 1,
+ }
+ 
 function saveGame() {
       localStorage.setItem('gameTutorial', JSON.stringify(game));
     }
